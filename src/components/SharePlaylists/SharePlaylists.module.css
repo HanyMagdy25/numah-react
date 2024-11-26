@@ -1,0 +1,68 @@
+.sharePlaylists {
+  margin-top: 60px;
+}
+.title {
+  color: #000000;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: start;
+  margin-bottom: 40px;
+  max-width: 532px;
+}
+
+.frames {
+  display: flex;
+  justify-content: space-between;
+  gap: 2%;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.oneLinkDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.oneLink {
+  border: 1px solid #909090;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  width: 100%;
+  padding: 10px 24px;
+  transition: var(--transition);
+}
+.oneLink:hover {
+  background-color: #909090;
+  color: #fff;
+}
+
+.circleImages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.circle:nth-child(1),
+.circle:nth-child(2),
+.circle:nth-child(3),
+.circle:nth-child(4) {
+  margin-left: -40px;
+}
+.circle .img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

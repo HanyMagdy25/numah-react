@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter } from "react-router-dom";
+import "./App.css";
+import Header from "./components/Layout/Header/Header";
+import Footer from "./components/Layout/Footer/Footer";
+import Banner from "./components/Banner/Banner";
+import ForFans from "./components/ForFans/ForFans";
+import Features from "./components/Features/Features";
+import SharePlaylists from "./components/SharePlaylists/SharePlaylists";
+import Wishlist from "./components/Wishlist/Wishlist";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <div className="container">
+          <Banner />
+          <ForFans />
+          <Features />
+          <SharePlaylists />
+          <Wishlist />
+        </div>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
