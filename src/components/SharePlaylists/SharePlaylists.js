@@ -35,13 +35,13 @@ const SharePlaylists = () => {
         </div>
         <div className={styles.circleImages}>
           <div className={styles.circle}>
-            <img src={img1} alt="img" className={styles.img} />
-          </div>
-          <div className={styles.circle}>
             <img src={img2} alt="img" className={styles.img} />
           </div>
           <div className={styles.circle}>
             <img src={img4} alt="img" className={styles.img} />
+          </div>
+          <div className={styles.circle}>
+            <img src={img1} alt="img" className={styles.img} />
           </div>
           <div className={styles.circle}>
             <img src={img3} alt="img" className={styles.img} />

@@ -17,7 +17,7 @@
   max-width: 850px;
   margin-inline: auto;
 }
-.frames {
+.framesDesktop {
   display: flex;
   gap: 2%;
 }
@@ -58,6 +58,9 @@
   gap: 12px;
   width: 100%;
 }
+.oneLinkDiv:nth-child(even) {
+  flex-direction: row-reverse;
+}
 
 .newImg {
   width: 38px;
@@ -78,9 +81,48 @@
   background-color: #909090;
   color: #fff;
 }
+
+.divSwiper {
+  width: 100%;
+  margin-top: 20px;
+}
+.framesMobile {
+  display: none;
+}
 /* Media Queries */
 @media screen and (max-width: 992px) {
   .forFans {
     padding: 0;
+  }
+  .framesDesktop {
+    display: none;
+  }
+  .framesMobile {
+    display: block;
+  }
+  .oneFrame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+  .description {
+    font-size: 16px;
+    max-width: 600px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+  .description {
+    font-size: 14px;
   }
 }

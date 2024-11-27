@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import { ReactComponent as BagIcon } from "../../../assets/bag.svg";
@@ -6,20 +6,20 @@ import { ReactComponent as UserIcon } from "../../../assets/user.svg";
 
 import { ReactComponent as ArrowLeft } from "../../../assets/arrow-left.svg";
 import { ReactComponent as ArrowRight } from "../../../assets/arrow-right.svg";
-import { ReactComponent as Menuicon } from "../../../assets/menu.svg";
+// import { ReactComponent as Menuicon } from "../../../assets/menu.svg";
 const Header = () => {
-  const [showSidebar, setShowSidebar] = useState();
+  // const [showSidebar, setShowSidebar] = useState();
   return (
     <header className={`${styles.header}`}>
       <div className={`${styles.headerInner} container`}>
-        <button
+        {/* <button
           className={styles.menuBtn}
           type="button"
           onClick={() => setShowSidebar(true)}
           aria-label="menu"
         >
           <Menuicon fill="#FFD500" />
-        </button>
+        </button> */}
 
         <div className={styles.left}>
           <div className={styles.arrows}>
@@ -32,14 +32,14 @@ const Header = () => {
             Go Premium
           </Link>
           <div className={styles.icons}>
-            <button
+            {/* <button
               className={`${styles.menuBtn} ${styles.menuBtnMobile}`}
               type="button"
               onClick={() => setShowSidebar(true)}
               aria-label="menu"
             >
               <Menuicon fill="#FFD500" />
-            </button>
+            </button> */}
             <Link href="/cart" className={styles.icon}>
               <BagIcon />
             </Link>

@@ -164,6 +164,13 @@
     padding-top: 82px;
     padding-bottom: 20px;
   }
+  .group {
+    width: 49%;
+  }
+  .footerLeft {
+    gap: 30px 2%;
+    z-index: 1;
+  }
 }
 @media screen and (max-width: 450px) {
   .headTitle {
@@ -172,5 +179,10 @@
   }
   .link {
     font-size: 14px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .group {
+    width: 100%;
   }
 }
