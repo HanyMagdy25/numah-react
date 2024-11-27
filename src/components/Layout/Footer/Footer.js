@@ -101,13 +101,13 @@ const Footer = () => {
           </div>
           <div className={styles.footerRight}>
             <div className={styles.allIcons}>
-              <Link href="/" className={styles.oneIcon}>
+              <Link data-social="Facebook" href="/" className={styles.oneIcon}>
                 <Facebook />
               </Link>
-              <Link href="/" className={styles.oneIcon}>
+              <Link data-social="X" href="/" className={styles.oneIcon}>
                 <X />
               </Link>
-              <Link href="/" className={styles.oneIcon}>
+              <Link data-social="Instagram" href="/" className={styles.oneIcon}>
                 <Insta />
               </Link>
             </div>
