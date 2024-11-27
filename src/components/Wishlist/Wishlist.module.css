@@ -157,6 +157,9 @@
   .cardTitle {
     font-size: 20px;
   }
+  .wishlist {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (max-width: 500px) {
   .cardImg {
