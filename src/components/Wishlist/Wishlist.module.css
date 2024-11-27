@@ -104,8 +104,6 @@
   height: 40px;
   object-fit: cover;
 }
-.giftsUser .name {
-}
 
 /* Media Queries */
 @media screen and (max-width: 992px) {
