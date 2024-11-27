@@ -1,9 +1,26 @@
+import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
+// Images
 import LogoImage from "../../../assets/logoImg.png";
 import { ReactComponent as Insta } from "../../../assets/social/Group.svg";
 import { ReactComponent as X } from "../../../assets/social/path1009.svg";
 import { ReactComponent as Facebook } from "../../../assets/social/Vector.svg";
-import { Link } from "react-router-dom";
+
+const FooterGroup = ({ title, links }) => (
+  <div className={styles.group}>
+    <h2 className={styles.headTitle}>{title}</h2>
+    <ul className={styles.ul}>
+      {links.map((item, index) => (
+        <li key={index}>
+          <Link to={item.href} className={styles.link}>
+            {item.label}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
+
 const Footer = () => {
   // const isActive = (path) => {
   //   if (typeof window !== "undefined") {
@@ -25,7 +42,7 @@ const Footer = () => {
     { label: "Investors", href: "/Investors" },
     { label: "Brands", href: "/Brands" },
   ];
-  const usfulLinksData = [
+  const usefulLinksData = [
     { label: "Help", href: "/Help" },
     { label: "Gift", href: "/Gift" },
     { label: "Web Player", href: "/Web Player" },
@@ -41,73 +58,34 @@ const Footer = () => {
                 <img src={LogoImage} alt="Logo" />
               </Link>
             </div>
-            <div className={styles.group}>
-              <h2 className={styles.headTitle}>Company</h2>
-              <div className={styles.parent}>
-                <ul className={styles.ul}>
-                  {companyData?.map((item, index) => (
-                    <li
-                      key={index}
-                      // className={`${styles.div8} ${
-                      //   isActive(item?.href) ? styles.active : ""
-                      // }`}
-                    >
-                      <Link href={item?.href} className={styles.link}>
-                        {item?.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className={styles.group}>
-              <h2 className={styles.headTitle}>Comminities</h2>
-              <div className={styles.parent}>
-                <ul className={styles.ul}>
-                  {communitiesData?.map((item, index) => (
-                    <li
-                      key={index}
-                      // className={`${styles.div8} ${
-                      //   isActive(item?.href) ? styles.active : ""
-                      // }`}
-                    >
-                      <Link href={item?.href} className={styles.link}>
-                        {item?.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className={styles.group}>
-              <h2 className={styles.headTitle}>Usful Links</h2>
-              <div className={styles.parent}>
-                <ul className={styles.ul}>
-                  {usfulLinksData?.map((item, index) => (
-                    <li
-                      key={index}
-                      // className={`${styles.div8} ${
-                      //   isActive(item?.href) ? styles.active : ""
-                      // }`}
-                    >
-                      <Link href={item?.href} className={styles.link}>
-                        {item?.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            <FooterGroup title="Company" links={companyData} />
+            <FooterGroup title="Communities" links={communitiesData} />
+            <FooterGroup title="Useful Links" links={usefulLinksData} />
           </div>
           <div className={styles.footerRight}>
             <div className={styles.allIcons}>
-              <Link data-social="Facebook" href="/" className={styles.oneIcon}>
+              <Link
+                data-social="Facebook"
+                aria-label="Facebook"
+                href="/"
+                className={styles.oneIcon}
+              >
                 <Facebook />
               </Link>
-              <Link data-social="X" href="/" className={styles.oneIcon}>
+              <Link
+                data-social="X"
+                aria-label="X"
+                href="/"
+                className={styles.oneIcon}
+              >
                 <X />
               </Link>
-              <Link data-social="Instagram" href="/" className={styles.oneIcon}>
+              <Link
+                data-social="Instagram"
+                aria-label="Instagram"
+                href="/"
+                className={styles.oneIcon}
+              >
                 <Insta />
               </Link>
             </div>
