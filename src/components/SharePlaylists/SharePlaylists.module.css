@@ -51,10 +51,7 @@
   border-radius: 50%;
   overflow: hidden;
 }
-.circle:nth-child(1),
-.circle:nth-child(2),
-.circle:nth-child(3),
-.circle:nth-child(4) {
+.circle {
   margin-left: -40px;
 }
 .circle .img {
@@ -100,10 +97,7 @@
   .circleImages {
     margin-left: 30px;
   }
-  .circle:nth-child(1),
-  .circle:nth-child(2),
-  .circle:nth-child(3),
-  .circle:nth-child(4) {
+  .circle {
     margin-left: -30px;
   }
 }

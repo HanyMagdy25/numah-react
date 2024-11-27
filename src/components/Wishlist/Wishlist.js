@@ -5,7 +5,27 @@ import purchase from "../../assets/purchase.jpg";
 import gift1 from "../../assets/gift (1).png";
 import gift2 from "../../assets/gift (2).png";
 import gift3 from "../../assets/gift (3).png";
+
+const GiftImages = ({ gifts }) => (
+  <div className={styles.giftsUser}>
+    {gifts.map((gift, index) => (
+      <img
+        key={index}
+        src={gift.src}
+        alt={gift.alt}
+        className={styles.giftImg}
+      />
+    ))}
+    <div className={styles.more}>1+</div>
+  </div>
+);
+
 const Wishlist = () => {
+  const gifts = [
+    { src: gift1, alt: "Gift 1" },
+    { src: gift2, alt: "Gift 2" },
+    { src: gift3, alt: "Gift 3" },
+  ];
   return (
     <div className={styles.wishlist}>
       <div className={styles.frames}>
@@ -38,12 +58,8 @@ const Wishlist = () => {
                 Spread the joy of music by gifting songs to your friends with
                 Numah's unique gifting feature
               </p>
-              <div className={styles.giftsUser}>
-                <img src={gift1} alt="gift" />
-                <img src={gift2} alt="gift" />
-                <img src={gift3} alt="gift" />
-                <div className={styles.more}>1+</div>
-              </div>
+
+              <GiftImages gifts={gifts} />
             </div>
           </div>
         </div>
