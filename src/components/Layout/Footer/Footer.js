@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 // Images
-import LogoImage from "../../../assets/logoImg.png";
+import { ReactComponent as LogoIcon } from "../../../assets/logo.svg";
 import { ReactComponent as Insta } from "../../../assets/social/Group.svg";
 import { ReactComponent as X } from "../../../assets/social/path1009.svg";
 import { ReactComponent as Facebook } from "../../../assets/social/Vector.svg";
@@ -55,7 +55,7 @@ const Footer = () => {
           <div className={styles.footerLeft}>
             <div className={styles.logoCol}>
               <Link href="/" className={styles.logo}>
-                <img src={LogoImage} alt="Logo" />
+                <LogoIcon />
               </Link>
             </div>
             <FooterGroup title="Company" links={companyData} />
